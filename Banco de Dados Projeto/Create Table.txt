@@ -1,0 +1,26 @@
+create table if not exists Cliente(
+idCliente serial,
+nome varchar(100),
+cpf varchar(100),
+email varchar(100),
+constraint Cliente_pkey primary key (idCliente)
+);
+
+create table if not exists Servico(
+idServ serial,
+descricao varchar(100),
+preco float,
+constraint Servico_pkey primary key (idServ)
+);
+
+create table if not exists Agendamento(
+idAge serial,
+idCliente int, 
+idServ int,
+valor float,
+data varchar(100),
+obs varchar(100),
+constraint Agenda_pkey primary key (idAge),
+constraint Agenda_fkey1 foreign key (idCliente) references Cliente (idCliente),
+constraint Agenda_fkey2 foreign key (idServ) references Servico (idServ)
+);

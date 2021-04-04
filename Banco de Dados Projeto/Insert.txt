@@ -1,0 +1,6 @@
+insert into Servico (descricao, preco) values ('Corte Degrade', 30);
+insert into Servico (descricao, preco) values ('Barba Simples', 15);
+insert into Servico (descricao, preco) values ('Barba Desenhada', 25);
+insert into Servico (descricao, preco) values ('Sombrancelhas', 10);
+insert into Servico (descricao, preco) values ('Penteados', 3);
+
